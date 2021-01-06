@@ -1,0 +1,31 @@
+@import '../../../styles.scss';
+
+.app-card__card-container {
+  display: grid;
+  grid-gap: 10px;
+  border-radius: 3px;
+
+  @include box-shadow();
+
+  .card-container__header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 10px;
+    align-items: center;
+    padding: 10px;
+    background-color: $green;
+    color: #FFF;
+  }
+
+  .header__title {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    grid-gap: 10px;
+  }
+}
+
+.card-container__body,
+.card-container__footer {
+  padding: 10px;
+}
