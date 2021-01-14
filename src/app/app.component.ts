@@ -18,5 +18,6 @@ export class AppComponent {
       isExpanded: false
     }
   ]
+  public progressValue = 25;
   title = 'angular-challenges';
 }

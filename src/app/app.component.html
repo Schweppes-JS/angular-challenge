@@ -10,6 +10,17 @@
 
 <main class="main-container">
   <app-card
+    [title]="'Progress Bar'"
+    [iconClasses]="'fas fa-info-circle'"
+    [subTitle]="'Components'">
+
+    <app-progress-bar body [value]="progressValue"></app-progress-bar>
+
+    <button footer (click)="progressValue = 75;">Update</button>
+
+  </app-card>
+
+  <app-card
     [title]="'Card'"
     [iconClasses]="'fas fa-info-circle'"
     [subTitle]="'Components'">
