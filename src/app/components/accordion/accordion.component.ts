@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { AccordionItem } from '../../models/accordion-item.interface'
 
 @Component({
@@ -6,7 +6,7 @@ import { AccordionItem } from '../../models/accordion-item.interface'
   templateUrl: './accordion.component.html',
   styleUrls: ['./accordion.component.scss']
 })
-export class AccordionComponent implements OnInit {
+export class AccordionComponent {
 
   @Input() public items: AccordionItem[] = [];
 
@@ -14,12 +14,5 @@ export class AccordionComponent implements OnInit {
     item.isExpanded = !item.isExpanded;
   }
 
-  constructor() {
-    console.log(this.items)
-  }
-
-  ngOnInit(): void {
-    console.log(this.items)
-  }
-
+  constructor() { }
 }

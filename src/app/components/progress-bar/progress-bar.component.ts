@@ -6,7 +6,9 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./progress-bar.component.scss']
 })
 export class ProgressBarComponent {
+
   @Input() public value = 0;
   @Input() public max = 100;
 
+  constructor() { }
 }
