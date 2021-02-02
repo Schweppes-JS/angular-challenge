@@ -3,11 +3,19 @@ import { CommonModule } from '@angular/common';
 import { PipeDocumentationComponent } from './pipe-documentation/pipe-documentation.component';
 import { RouterModule } from '@angular/router';
 import { PIPES_ROUTES } from './pipes.routes';
+import { BannerCutOutComponent } from '../components/banner-cut-out/banner-cut-out.component';
+import { SharedModule } from '../shared/shared.module';
+import { TruncatePipe } from './truncate/truncate.pipe';
 
 @NgModule({
-  declarations: [PipeDocumentationComponent],
+  declarations: [
+    PipeDocumentationComponent,
+    BannerCutOutComponent,
+    TruncatePipe
+  ],
   imports: [
     CommonModule,
+    SharedModule,
     RouterModule.forChild(PIPES_ROUTES)
   ]
 })

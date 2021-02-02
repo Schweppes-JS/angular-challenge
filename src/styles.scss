@@ -21,3 +21,13 @@ h6 {
   font-family: "Montserrat", sans-serif;
   font-weight: 900;
 }
+
+.main-container {
+  min-height: 100vh;
+  position: relative;
+
+  &__root-container {
+    display: block;
+    height: 100%;
+  }
+}

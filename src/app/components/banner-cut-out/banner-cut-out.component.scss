@@ -1,0 +1,24 @@
+:host {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.picture__image {
+  width: 100%;
+}
+
+.banner-cut-out__title {
+  width: 200px;
+  height: 100px;
+  background-color: #FFF;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+}

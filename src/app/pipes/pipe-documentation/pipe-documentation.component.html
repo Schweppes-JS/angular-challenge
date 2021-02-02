@@ -1,1 +1,5 @@
-<p>pipe-documentation works!</p>
+<app-banner-cut-out ></app-banner-cut-out>
+
+<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Truncate'" [subTitle]="'Pipes'">
+  <p body>{{'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae voluptatum dolor saepe eius fugit natus error, fugiat unde dolorum? Vitae optio molestias quae pariatur natus quaerat fuga sit delectus eveniet?' | truncate: 75 }}</p>
+</app-card>
