@@ -21,7 +21,7 @@ import { SharedModule } from './shared/shared.module';
     ProgressBarComponent,
     StarRatingsComponent,
     TopOfPageComponent,
-    ComponentDocumentationComponent,
+    ComponentDocumentationComponent
   ],
   imports: [
     BrowserModule,

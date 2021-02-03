@@ -6,12 +6,14 @@ import { PIPES_ROUTES } from './pipes.routes';
 import { BannerCutOutComponent } from '../components/banner-cut-out/banner-cut-out.component';
 import { SharedModule } from '../shared/shared.module';
 import { TruncatePipe } from './truncate/truncate.pipe';
+import { CreditCardFormatterPipe } from './credit-card-formatter/credit-card-formatter.pipe';
 
 @NgModule({
   declarations: [
     PipeDocumentationComponent,
     BannerCutOutComponent,
-    TruncatePipe
+    TruncatePipe,
+    CreditCardFormatterPipe
   ],
   imports: [
     CommonModule,
