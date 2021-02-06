@@ -14,6 +14,7 @@ import { ComponentDocumentationComponent } from './components/component-document
 import { APP_ROUTES } from './app.routes';
 import { SharedModule } from './shared/shared.module';
 import { CreditCardInputComponent } from './components/credit-card-input/credit-card-input.component';
+import { LoaderComponent } from './components/loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { CreditCardInputComponent } from './components/credit-card-input/credit-
     StarRatingsComponent,
     TopOfPageComponent,
     ComponentDocumentationComponent,
-    CreditCardInputComponent
+    CreditCardInputComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,

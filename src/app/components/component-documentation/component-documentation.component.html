@@ -2,6 +2,14 @@
 <hr>
 
 <app-card
+  [title]="'Loader'"
+  [iconClasses]="'fas fa-info-circle'"
+  [subTitle]="'Components'"
+>
+  <app-loader body [isLoading]="false"></app-loader>
+</app-card>
+
+<app-card
   [title]="'Credit Card Input'"
   [iconClasses]="'fas fa-info-circle'"
   [subTitle]="'Components'"
