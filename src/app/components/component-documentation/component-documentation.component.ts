@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AccordionItem } from 'src/app/models/accordion-item.interface';
+import { LoaderType } from '../loader/models/loader-type.enum';
 
 @Component({
   selector: 'app-component-documentation',
@@ -21,4 +22,5 @@ export class ComponentDocumentationComponent {
   ]
   public progressValue = 25;
   title = 'angular-challenges';
+  public loaderType = LoaderType.Loading;
 }
