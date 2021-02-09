@@ -15,6 +15,7 @@ import { APP_ROUTES } from './app.routes';
 import { SharedModule } from './shared/shared.module';
 import { CreditCardInputComponent } from './components/credit-card-input/credit-card-input.component';
 import { LoaderComponent } from './components/loader/loader.component';
+import { TwitterPostComponent } from './components/twitter-post/twitter-post.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { LoaderComponent } from './components/loader/loader.component';
     TopOfPageComponent,
     ComponentDocumentationComponent,
     CreditCardInputComponent,
-    LoaderComponent
+    LoaderComponent,
+    TwitterPostComponent
   ],
   imports: [
     BrowserModule,
