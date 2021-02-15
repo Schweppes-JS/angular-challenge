@@ -16,6 +16,7 @@ import { SharedModule } from './shared/shared.module';
 import { CreditCardInputComponent } from './components/credit-card-input/credit-card-input.component';
 import { LoaderComponent } from './components/loader/loader.component';
 import { TwitterPostComponent } from './components/twitter-post/twitter-post.component';
+import { LinkedinPostComponent } from './components/linkedin-post/linkedin-post.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { TwitterPostComponent } from './components/twitter-post/twitter-post.com
     ComponentDocumentationComponent,
     CreditCardInputComponent,
     LoaderComponent,
-    TwitterPostComponent
+    TwitterPostComponent,
+    LinkedinPostComponent
   ],
   imports: [
     BrowserModule,
