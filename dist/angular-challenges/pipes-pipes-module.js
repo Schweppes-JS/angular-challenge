@@ -87,8 +87,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
 /* harmony import */ var _components_banner_cut_out_banner_cut_out_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/banner-cut-out/banner-cut-out.component */ "nmYC");
 /* harmony import */ var _shared_components_card_card_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../shared/components/card/card.component */ "L21D");
-/* harmony import */ var _credit_card_formatter_credit_card_formatter_pipe__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../credit-card-formatter/credit-card-formatter.pipe */ "D4jl");
-/* harmony import */ var _truncate_truncate_pipe__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../truncate/truncate.pipe */ "qo4k");
+/* harmony import */ var _flatten_flatten_pipe__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../flatten/flatten.pipe */ "zqGv");
+/* harmony import */ var _credit_card_formatter_credit_card_formatter_pipe__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../credit-card-formatter/credit-card-formatter.pipe */ "D4jl");
+/* harmony import */ var _truncate_truncate_pipe__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../truncate/truncate.pipe */ "qo4k");
+
 
 
 
@@ -96,49 +98,75 @@ __webpack_require__.r(__webpack_exports__);
 
 
 class PipeDocumentationComponent {
-    constructor() { }
-    ngOnInit() {
+    constructor() {
+        this.flattenData = [1, 2, [3], [4, [5, 6, [7]]]];
+    }
+    modifyFlatten() {
+        this.flattenData.push(3, 5);
+    }
+    reassignFlatten() {
+        this.flattenData = [...this.flattenData];
     }
 }
 PipeDocumentationComponent.ɵfac = function PipeDocumentationComponent_Factory(t) { return new (t || PipeDocumentationComponent)(); };
-PipeDocumentationComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: PipeDocumentationComponent, selectors: [["app-pipe-documentation"]], decls: 16, vars: 19, consts: [[3, "iconClasses", "title", "subTitle"], ["body", ""]], template: function PipeDocumentationComponent_Template(rf, ctx) { if (rf & 1) {
+PipeDocumentationComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: PipeDocumentationComponent, selectors: [["app-pipe-documentation"]], decls: 25, vars: 25, consts: [[3, "iconClasses", "title", "subTitle"], ["body", ""], ["footer", ""], [3, "click"]], template: function PipeDocumentationComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "app-banner-cut-out");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "app-card", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "p");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](4);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](5, "creditCardFormatter");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](4, "appFlatten");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "p");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](8, "creditCardFormatter");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "div", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "button", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function PipeDocumentationComponent_Template_button_click_6_listener() { return ctx.modifyFlatten(); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, "Modify");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "p");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](10);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](11, "creditCardFormatter");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "button", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function PipeDocumentationComponent_Template_button_click_8_listener() { return ctx.reassignFlatten(); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](9, "Reassign");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "app-card", 0);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "p", 1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](14);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](15, "truncate");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "app-card", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "div", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](13);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](14, "creditCardFormatter");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](16);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](17, "creditCardFormatter");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](19);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](20, "creditCardFormatter");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](21, "app-card", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](22, "p", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](23);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](24, "truncate");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     } if (rf & 2) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("iconClasses", "fas fa-info-circle")("title", "Flatten")("subTitle", "Pipes");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](4, 14, ctx.flattenData), " ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](7);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("iconClasses", "fas fa-info-circle")("title", "Credit Card Formater")("subTitle", "Pipes");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](5, 10, "1111222233334444"));
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](14, 16, "1111222233334444"));
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](8, 12, "11111111111111111111111111"));
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](17, 18, "11111111111111111111111111"));
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](11, 14, "a111222233334444"));
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](20, 20, "a111222233334444"));
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("iconClasses", "fas fa-info-circle")("title", "Truncate")("subTitle", "Pipes");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind2"](15, 16, "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae voluptatum dolor saepe eius fugit natus error, fugiat unde dolorum? Vitae optio molestias quae pariatur natus quaerat fuga sit delectus eveniet?", 75));
-    } }, directives: [_components_banner_cut_out_banner_cut_out_component__WEBPACK_IMPORTED_MODULE_1__["BannerCutOutComponent"], _shared_components_card_card_component__WEBPACK_IMPORTED_MODULE_2__["CardComponent"]], pipes: [_credit_card_formatter_credit_card_formatter_pipe__WEBPACK_IMPORTED_MODULE_3__["CreditCardFormatterPipe"], _truncate_truncate_pipe__WEBPACK_IMPORTED_MODULE_4__["TruncatePipe"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJwaXBlLWRvY3VtZW50YXRpb24uY29tcG9uZW50LnNjc3MifQ== */"] });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind2"](24, 22, "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae voluptatum dolor saepe eius fugit natus error, fugiat unde dolorum? Vitae optio molestias quae pariatur natus quaerat fuga sit delectus eveniet?", 75));
+    } }, directives: [_components_banner_cut_out_banner_cut_out_component__WEBPACK_IMPORTED_MODULE_1__["BannerCutOutComponent"], _shared_components_card_card_component__WEBPACK_IMPORTED_MODULE_2__["CardComponent"]], pipes: [_flatten_flatten_pipe__WEBPACK_IMPORTED_MODULE_3__["FlattenPipe"], _credit_card_formatter_credit_card_formatter_pipe__WEBPACK_IMPORTED_MODULE_4__["CreditCardFormatterPipe"], _truncate_truncate_pipe__WEBPACK_IMPORTED_MODULE_5__["TruncatePipe"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJwaXBlLWRvY3VtZW50YXRpb24uY29tcG9uZW50LnNjc3MifQ== */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](PipeDocumentationComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
@@ -146,7 +174,7 @@ PipeDocumentationComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["�
                 templateUrl: './pipe-documentation.component.html',
                 styleUrls: ['./pipe-documentation.component.scss']
             }]
-    }], function () { return []; }, null); })();
+    }], null, null); })();
 
 
 /***/ }),
@@ -170,6 +198,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _shared_shared_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../shared/shared.module */ "PCNd");
 /* harmony import */ var _truncate_truncate_pipe__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./truncate/truncate.pipe */ "qo4k");
 /* harmony import */ var _credit_card_formatter_credit_card_formatter_pipe__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./credit-card-formatter/credit-card-formatter.pipe */ "D4jl");
+/* harmony import */ var _flatten_flatten_pipe__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./flatten/flatten.pipe */ "zqGv");
+
 
 
 
@@ -192,7 +222,8 @@ PipesModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInject
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](PipesModule, { declarations: [_pipe_documentation_pipe_documentation_component__WEBPACK_IMPORTED_MODULE_2__["PipeDocumentationComponent"],
         _components_banner_cut_out_banner_cut_out_component__WEBPACK_IMPORTED_MODULE_5__["BannerCutOutComponent"],
         _truncate_truncate_pipe__WEBPACK_IMPORTED_MODULE_7__["TruncatePipe"],
-        _credit_card_formatter_credit_card_formatter_pipe__WEBPACK_IMPORTED_MODULE_8__["CreditCardFormatterPipe"]], imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
+        _credit_card_formatter_credit_card_formatter_pipe__WEBPACK_IMPORTED_MODULE_8__["CreditCardFormatterPipe"],
+        _flatten_flatten_pipe__WEBPACK_IMPORTED_MODULE_9__["FlattenPipe"]], imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
         _shared_shared_module__WEBPACK_IMPORTED_MODULE_6__["SharedModule"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"]] }); })();
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](PipesModule, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
@@ -201,7 +232,8 @@ PipesModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInject
                     _pipe_documentation_pipe_documentation_component__WEBPACK_IMPORTED_MODULE_2__["PipeDocumentationComponent"],
                     _components_banner_cut_out_banner_cut_out_component__WEBPACK_IMPORTED_MODULE_5__["BannerCutOutComponent"],
                     _truncate_truncate_pipe__WEBPACK_IMPORTED_MODULE_7__["TruncatePipe"],
-                    _credit_card_formatter_credit_card_formatter_pipe__WEBPACK_IMPORTED_MODULE_8__["CreditCardFormatterPipe"]
+                    _credit_card_formatter_credit_card_formatter_pipe__WEBPACK_IMPORTED_MODULE_8__["CreditCardFormatterPipe"],
+                    _flatten_flatten_pipe__WEBPACK_IMPORTED_MODULE_9__["FlattenPipe"]
                 ],
                 imports: [
                     _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
@@ -284,6 +316,48 @@ TruncatePipe.ɵpipe = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefinePipe
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Pipe"],
         args: [{
                 name: 'truncate'
+            }]
+    }], null, null); })();
+
+
+/***/ }),
+
+/***/ "zqGv":
+/*!***********************************************!*\
+  !*** ./src/app/pipes/flatten/flatten.pipe.ts ***!
+  \***********************************************/
+/*! exports provided: FlattenPipe */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FlattenPipe", function() { return FlattenPipe; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
+
+
+class FlattenPipe {
+    transform(values) {
+        return this.flattenArray(values);
+    }
+    flattenArray(arr) {
+        const result = [];
+        arr.forEach((value) => {
+            if (Array.isArray(value)) {
+                result.push(...this.flattenArray(value));
+            }
+            else {
+                result.push(value);
+            }
+        });
+        return result;
+    }
+}
+FlattenPipe.ɵfac = function FlattenPipe_Factory(t) { return new (t || FlattenPipe)(); };
+FlattenPipe.ɵpipe = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefinePipe"]({ name: "appFlatten", type: FlattenPipe, pure: true });
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](FlattenPipe, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Pipe"],
+        args: [{
+                name: 'appFlatten',
             }]
     }], null, null); })();
 

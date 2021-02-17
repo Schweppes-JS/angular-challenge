@@ -7,13 +7,15 @@ import { BannerCutOutComponent } from '../components/banner-cut-out/banner-cut-o
 import { SharedModule } from '../shared/shared.module';
 import { TruncatePipe } from './truncate/truncate.pipe';
 import { CreditCardFormatterPipe } from './credit-card-formatter/credit-card-formatter.pipe';
+import { FlattenPipe } from './flatten/flatten.pipe';
 
 @NgModule({
   declarations: [
     PipeDocumentationComponent,
     BannerCutOutComponent,
     TruncatePipe,
-    CreditCardFormatterPipe
+    CreditCardFormatterPipe,
+    FlattenPipe
   ],
   imports: [
     CommonModule,

@@ -1,5 +1,15 @@
 <app-banner-cut-out ></app-banner-cut-out>
 
+<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Flatten'" [subTitle]="'Pipes'">
+  <div body>
+    {{ flattenData | appFlatten}}
+  </div>
+  <div footer>
+    <button (click)="modifyFlatten()">Modify</button>
+    <button (click)="reassignFlatten()">Reassign</button>
+  </div>
+</app-card>
+
 <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Credit Card Formater'" [subTitle]="'Pipes'">
   <div body>
     <p>{{'1111222233334444' | creditCardFormatter}}</p>
