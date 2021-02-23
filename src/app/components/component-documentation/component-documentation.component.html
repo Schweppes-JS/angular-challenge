@@ -2,6 +2,19 @@
 <hr>
 
 <app-card
+  [title]="'Quote'"
+  [iconClasses]="'fas fa-info-circle'"
+  [subTitle]="'Components'"
+>
+  <app-quote 
+    body
+    [quote]="'Get Good. Get Greate. Get Better.'"
+    [author]="'Shvets D. Ukraine'"
+    [occupation]="'JavaScript Engineer'"
+  ></app-quote>
+</app-card>
+
+<app-card
   [title]="'Modal'"
   [iconClasses]="'fas fa-info-circle'"
   [subTitle]="'Components'"
