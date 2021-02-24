@@ -2,6 +2,14 @@
 <hr>
 
 <app-card
+  [title]="'Toggle'"
+  [iconClasses]="'fas fa-info-circle'"
+  [subTitle]="'Components'"
+>
+  <app-toggle [isOn]="toggleValue" body></app-toggle>
+</app-card>
+
+<app-card
   [title]="'Quote'"
   [iconClasses]="'fas fa-info-circle'"
   [subTitle]="'Components'"
