@@ -8,6 +8,7 @@ import { SharedModule } from '../shared/shared.module';
 import { TruncatePipe } from './truncate/truncate.pipe';
 import { CreditCardFormatterPipe } from './credit-card-formatter/credit-card-formatter.pipe';
 import { FlattenPipe } from './flatten/flatten.pipe';
+import { FilterTermPipe } from './filter-term/filter-term.pipe';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { FlattenPipe } from './flatten/flatten.pipe';
     BannerCutOutComponent,
     TruncatePipe,
     CreditCardFormatterPipe,
-    FlattenPipe
+    FlattenPipe,
+    FilterTermPipe
   ],
   imports: [
     CommonModule,
