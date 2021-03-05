@@ -2,6 +2,29 @@
 <hr>
 
 <app-card
+  [title]="'Rich Text Viewer'"
+  [iconClasses]="'fas fa-info-circle'"
+  [subTitle]="'Components'"
+>
+  <div body>
+    <div>
+      <h3>Good Example</h3>
+      <app-rich-text-viewer [htmlText]="'<p>Hello World</p>'"></app-rich-text-viewer>
+    </div>
+
+    <div>
+      <h3>Empty Example</h3>
+      <app-rich-text-viewer [htmlText]="'   '"></app-rich-text-viewer>
+    </div>
+
+    <div>
+      <h3>Bad HTML Example</h3>
+      <app-rich-text-viewer [htmlText]="'<p> Hello World'"></app-rich-text-viewer>
+    </div>
+  </div>
+</app-card>
+
+<app-card
   [title]="'Toggle'"
   [iconClasses]="'fas fa-info-circle'"
   [subTitle]="'Components'"
