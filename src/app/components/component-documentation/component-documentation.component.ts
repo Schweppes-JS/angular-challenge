@@ -24,4 +24,8 @@ export class ComponentDocumentationComponent {
   title = 'angular-challenges';
   public loaderType = LoaderType.Loading;
   public toggleValue = false;
+
+  public debounceExampleMethod(value: string): void {
+    console.log('Component Documentation', value);
+  }
 }

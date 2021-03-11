@@ -12,7 +12,6 @@ export class TopOfPageComponent {
   @HostListener('window:scroll') onWindowScroll() {
     const yCoordinate = this.ViewportScroller.getScrollPosition()[1];
     this.isShown = yCoordinate > 400;
-    console.log(this.isShown)
   }
 
   constructor(private ViewportScroller: ViewportScroller) { }

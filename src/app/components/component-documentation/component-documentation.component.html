@@ -2,6 +2,14 @@
 <hr>
 
 <app-card
+  [title]="'Debounce Search'"
+  [iconClasses]="'fas fa-info-circle'"
+  [subTitle]="'Components'"
+>
+  <app-debounce-search body (searchUpdate)="debounceExampleMethod($event)"></app-debounce-search>
+</app-card>
+
+<app-card
   [title]="'Rich Text Viewer'"
   [iconClasses]="'fas fa-info-circle'"
   [subTitle]="'Components'"
