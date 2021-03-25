@@ -23,6 +23,7 @@ import { FilterTermPipe } from './filter-term/filter-term.pipe';
     CommonModule,
     SharedModule,
     RouterModule.forChild(PIPES_ROUTES)
-  ]
+  ],
+  exports: [FilterTermPipe]
 })
 export class PipesModule { }
