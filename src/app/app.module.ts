@@ -24,6 +24,7 @@ import { RichTextViewerComponent } from './components/rich-text-viewer/rich-text
 import { DebounceSearchComponent } from './components/debounce-search/debounce-search.component';
 import { SearchListComponent } from './components/search-list/search-list.component';
 import { PipesModule } from "src/app/pipes/pipes.module";
+import { CounterComponent } from './components/counter/counter.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { PipesModule } from "src/app/pipes/pipes.module";
     ToggleComponent,
     RichTextViewerComponent,
     DebounceSearchComponent,
-    SearchListComponent
+    SearchListComponent,
+    CounterComponent
   ],
   imports: [
     BrowserModule,
